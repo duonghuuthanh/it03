@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8">
+       <meta name="keywords" content="studying,html,css,js" />
+       <meta name="description" content="Day la trang we demo" />
+       <meta name="viewport" content="width=device-width, initial-scale=10" />
+       <meta http-equiv="refresh" content="1800" />
+        <title>My Website</title>
+        <link href="images/flask.png" rel="shortcut icon" />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <!-- CSS EXTERNAL -->
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width:500px)" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script>
+          $(document).ready(function() {
+            $("#gototop").hide()
+
+            $(window).scroll(function() {
+              if ($(this).scrollTop() >= 100) {
+                $("nav").css({
+                  "position": "fixed",
+                  "left": 0,
+                  "right": 0,
+                  "top": 0,
+                  "z-index": 999,
+                  "opacity": 0.7
+                })
+              } else {
+                $("nav").css({
+                  "position": "relative",
+                  "left": 0,
+                  "right": 0,
+                  "z-index": 999,
+                  "opacity":1
+                })
+              }
+
+              if ($(this).scrollTop() >= 100)
+                $("#gototop").show("slow")
+              else
+                $("#gototop").hide("slow")
+            })
+
+            $("#gototop").click(function() {
+                $("html, body").animate({
+                  scrollTop: 0
+                }, 2000);
+            })
+          })   
+        </script>
+        <style>
+          a#gototop {
+            text-decoration: none;
+            display: block;
+            padding: 20px 30px;
+            background-color: rgb(0, 0, 255, 0.6);
+            color: white;
+            position: fixed;
+            right: 15px;
+            bottom: 15px;
+            z-index: 9999;
+          }
+        </style>
+   </head> 
+   <body>
+        <div>
+          <a id="gototop" href="javascript:;">GO TO TOP</a>
+        </div>
+        <nav class="animate__animated animate__swing">
+            <ul class="menu">
+                <li><a href="#"><i class="fas fa-home"></i> Trang chu</a></li>
+                <li class="sub">
+                    <a href="#"><i class="fab fa-apple"></i> Danh muc mon hoc</a>
+
+                    <ul class="menu subcontent">
+                        <li><a href="#">THIET KE WEB</a></li>
+                        <li><a href="#">LAP TRINH OOP</a></li>
+                        <li><a href="#">LAP TRINH JAVA</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Dien dan</a></li>
+                <li><a href="#">Lien he</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                  <li data-target="#demo" data-slide-to="3"></li>
+                </ul>
+              
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/banner/b1.jpg" alt="Los Angeles">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/banner/b2.jpg" alt="Chicago">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/banner/b3.jpg" alt="New York">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/banner/b4.jpg" alt="New York">
+                  </div>
+                </div>
+              
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              
+              </div>
+        </section>
+        <section>
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Open modal
+              </button>
+              
+              <!-- The Modal -->
+              <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+              
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">My Box</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+              
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <h1>HELLO WORLD!!!</h1>
+                    </div>
+              
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+        </section>
+        <section>
+            <div class="items">
+                <div class="item animate__animated animate__bounceIn">
+                    <h1>THIET KE WEB</h1>
+                    <div>
+                        <picture>
+                            <source srcset="images/flask.png" media="(max-width: 500px)">
+                            <img src="images/default.png" alt="demo" />
+                        </picture>
+                        
+                    </div>
+                    <div class="label">NEW</div>
+                </div>
+                <div class="item">
+                    <h1>THIET KE WEB</h1>
+                    <div>
+                        <img src="images/java.jpeg" alt="demo" />
+                    </div>
+                    <div class="label">NEW</div>
+                </div>
+                <div class="item">
+                    <h1>THIET KE WEB</h1>
+                    <div>
+                        <img src="images/default.png" alt="demo" />
+                    </div>
+                </div>
+                <div class="item">
+                    <h1>THIET KE WEB</h1>
+                    <div>
+                        <img src="images/default.png" alt="demo" />
+                    </div>
+                </div>
+                <div class="item">
+                    <h1>THIET KE WEB</h1>
+                    <div>
+                        <img src="images/default.png" alt="demo" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="langs">
+                <div class="lang">
+                    <img src="images/flask.png" alt="test" />
+                    <p>Welcome to Flask’s documentation. Get started with Installation and then get an overview with the Quickstart. There is also a more detailed Tutorial that shows how to create a small but complete application with Flask. Common patterns are described in the Patterns for Flask section. The rest of the docs describe each component of Flask in detail, with a full reference in the API section.</p>
+                </div>
+                <div class="lang">
+                    <img src="images/flask.png" alt="test" />
+                    <p>Welcome to Flask’s documentation. Get started with Installation and then get an overview with the Quickstart. There is also a more detailed Tutorial that shows how to create a small but complete application with Flask. Common patterns are described in the Patterns for Flask section. The rest of the docs describe each component of Flask in detail, with a full reference in the API section.</p>
+                </div>
+                <div class="lang">
+                    <img src="images/flask.png" alt="test" />
+                    <p>Welcome to Flask’s documentation. Get started with Installation and then get an overview with the Quickstart. There is also a more detailed Tutorial that shows how to create a small but complete application with Flask. Common patterns are described in the Patterns for Flask section. The rest of the docs describe each component of Flask in detail, with a full reference in the API section.</p>
+                </div>
+                <div class="lang">
+                    <img src="images/flask.png" alt="test" />
+                    <p>Welcome to Flask’s documentation. Get started with Installation and then get an overview with the Quickstart. There is also a more detailed Tutorial that shows how to create a small but complete application with Flask. Common patterns are described in the Patterns for Flask section. The rest of the docs describe each component of Flask in detail, with a full reference in the API section.</p>
+                </div>
+            </div>
+        </section>
+   </body>
+</html>

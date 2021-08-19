@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Demo</title>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <style>
+            #ballId {
+                position: relative;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+              $("#showId").click(function() {
+                $("#ballId").fadeTo(3000, 1.0, function() {
+                    $("body").css({
+                        "background-color": "blue",
+                        "color": "white"
+                    })
+                })   
+              })  
+
+              $("#hideId").click(function() {
+                $("#ballId").fadeTo(3000, 0.2, function() {
+                    $("body").css({
+                        "background-color": "gold",
+                        "color": "red"
+                    })
+                })
+              })
+
+              $("#animateId").click(function() {
+                $("#ballId").animate({
+                    "left": "600px",
+                    "width": "400px"
+                }, 3000).animate({
+                    "top": "500px",
+                    "width": "500px"
+                }, 3000).animate({
+                    "left": 0,
+                    "top": 0,
+                    "width": "200px"
+                }, 3000)
+              })
+            })
+        </script>
+        <style>
+            ul.tab {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+
+            ul.tab > li > a {
+                display: block;
+                text-decoration: none;
+                background-color: blue;
+                color: white;
+                padding: 15px 20px;
+                min-width: 120px;
+                text-align: center;
+                margin-right: 10px;
+            }
+
+            .active {
+                background-color: red !important;
+                color: white;
+            }
+
+            .tab-content h1 {
+                margin: 0;
+                padding: 20px 8px;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                $(".tab-content h1:not(:first-child)").hide()
+
+                // $("ul.tab a").click
+                $("ul.tab").on("click", "li > a", function() {
+                    event.preventDefault()
+                    // xu ly tab
+                    $("ul.tab a").removeClass("active")
+                    $(this).addClass("active")
+
+                    // xu ly content
+                    var tab = $(this).attr("href")
+                    $(".tab-content h1").hide()
+                    $(tab).show()
+                })
+
+                $(".tab a").on({
+                    mouseenter: function() {
+                      $(this).css("color", "green")  
+                    },
+                    mouseleave: function() {
+                        $(this).css("color", "white")
+                    }
+                })
+
+                $("#addTabId").click(function() {
+                    var name = $("#tabName").val()
+                    var content = $("#tabContent").val()
+
+                    var count = $("ul.tab > li").length;
+                    $("ul.tab").append(
+                        `<li><a href="#tab${count+1}">${name}</a></li>`
+                    )
+                    $(".tab-content").append(
+                        `<h1 id="tab${count+1}" style="display:none">${content}</h1>`
+                    )
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h1>WELCOME TO jQUERY!</h1>
+        <section>
+            <div>
+                <input type="text" placeholder="Nhap ten tab..." id="tabName" />
+                <input type="text" placeholder="Nhap noi dung tab..." id="tabContent" />
+                <input type="button" value="Them tab" id="addTabId" />
+                <br><br>
+            </div>
+
+            <ul class="tab">
+                <li><a href="#tab1" class="active">Java</a></li>
+                <li><a href="#tab2">Python</a></li>
+                <li><a href="#tab3">C++</a></li>
+                <li><a href="#tab4">C#</a></li>
+            </ul>
+
+            <div class="tab-content active">
+                <h1 id="tab1">WELCOME TO JAVA!!!</h1>
+                <h1 id="tab2">WELCOME TO PYTHON!!!</h1>
+                <h1 id="tab3">WELCOME TO C++!!!</h1>
+                <h1 id="tab4">WELCOME TO C#!!!</h1>
+            </div>
+        </section>
+        <div>
+            <div>
+                <input type="button" value="Show" id="showId" />
+                <input type="button" value="Hide" id="hideId" />
+                <input type="button" value="Animate" id="animateId" />
+            </div>
+            
+            <img src="images/ball.png" width="200" alt="ball" id="ballId" />
+        </div>
+    </body>
+</html>

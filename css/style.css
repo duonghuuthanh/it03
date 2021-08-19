@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+  }
+ div.items {
+     display: flex;
+     flex-wrap: wrap;
+ }
+ div.item {
+     width: 32%;
+     margin: 0.5%;
+     background-color: darkorange;
+     border: 2px solid lightgray;
+     padding: 5px;
+     border-radius: 20px;
+     position: relative;
+ }
+
+ div.item > h1 {
+     font-size: 3vw;
+ }
+
+ div.label {
+     position: absolute;
+     top: 0;
+     right: 0;
+     background-color: gold;
+     padding: 10px 20px;
+     border-radius: 0 20px;
+ }
+
+ div.item img {
+     width: 100%;
+     transition: transform ease-in 1s;
+ }
+
+ div.item img:hover {
+     transform: scale(1.2);
+ }
+
+ div.item > div {
+     overflow: hidden;
+ }
+
+ @keyframes doimau {
+     20% {
+         background-color: red; 
+     }
+     50% {
+         background-color: blue;
+     }
+     75% {
+        background-color: chartreuse;
+     }
+ }
+ 
+ ul.menu {
+     
+     background-color: lightgray;
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+     animation: doimau 2s infinite;
+ }
+ nav > ul.menu {
+    display: flex;
+ }
+ ul.menu > li {
+     max-width: 200px;
+     border-right: 1px solid white;
+     /* padding: 20px; */
+ }
+
+ ul.menu > li > a{
+     text-decoration: none;
+     display: block;
+     padding: 20px;
+     color:darkgoldenrod;
+ }
+
+ ul.menu > li > a:hover {
+     background-color: darkblue;
+     color: white;
+ }
+
+ ul.menu > li:last-child {
+     margin-left: auto;
+ }
+ .subcontent {
+     display: none;
+ }
+ .sub:hover .subcontent {
+     display: block;
+     position: absolute;
+ }
+
+ div.lang {
+     overflow: auto;
+ }
+
+ div.lang > img {
+     width: 20%;
+     float: left;
+ }
+
+ @media screen and (max-width: 1500px) {
+     body {
+         background-color: lightblue;
+     }
+ }
+
+ @media screen and (max-width: 900px) {
+     body {
+         background-color: lightgreen;
+     }
+
+     div.item {
+        width: 49%;
+    }
+ }
+
+ @media screen and (max-width: 600px) {
+     body {
+         background-color: lightsalmon;
+     }
+
+     div.item {
+         width: 99%;
+     }
+
+     nav > ul.menu {
+        flex-direction: column;
+     }
+
+     ul.menu > li:last-child {
+        margin-left: 0;
+    }
+
+    ul.menu > li {
+        border-right: none;
+        max-width: 100%;
+    }
+
+    ul.menu > li > a:hover{
+        width: 100%;
+    }
+ }
+
+ @media screen and (orientation: landscape) {
+     body {
+         font-family: Arial, Helvetica, sans-serif;
+     }
+
+     ul > li > a {
+         font-size: 16px;
+     }
+ }
+
+ .carousel-item img {
+     width: 100% !important;
+ }
+
+ .carousel {
+     z-index: -1;
+ }

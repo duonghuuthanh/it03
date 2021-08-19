@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function giaiBac1() {
+                var a = document.getElementById("aId").value
+                var b = document.getElementById("bId").value
+
+                a = parseFloat(a) 
+                b = parseFloat(b)
+                
+                if (a == 0) {
+                    if (b == 0)
+                        alert("VO SO NGHIEM")
+                    else
+                        alert("VO NGHIEM")
+                } else {
+                    alert("Nghiem x = " + (-b/a))
+                }
+            }
+
+            function toMau(obj) {
+                var c = obj.value //document.getElementById("colorId").value
+                var b = document.getElementById("bodyId")
+
+                b.style.backgroundColor = c
+            }
+
+            function init() {
+                var h = document.getElementById("test")
+                h.style.color = "red"
+            }
+            
+        </script>
+    </head>
+    <body id="bodyId" onload="init()">
+        <input type="text" id="colorId" 
+                onchange="toMau(this)"
+                placeholder="Nhap ten mau..." />
+        <h1 id="test">ax + b = 0</h1>
+        <input type="text" id="aId" placeholder="a = " />
+        <input type="text" id="bId" placeholder="b = " />
+        <input type="button" value="Giai" onclick="giaiBac1()" />
+    </body>
+</html>
