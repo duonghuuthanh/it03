@@ -51,7 +51,7 @@
                 display: flex;
             }
 
-            ul.tab > li > a {
+            ul.tab > li > a:first-child {
                 display: block;
                 text-decoration: none;
                 background-color: blue;
@@ -71,13 +71,25 @@
                 margin: 0;
                 padding: 20px 8px;
             }
+
+            .tab > li {
+                position: relative;
+            }
+
+            .tab > li > a.close {
+                position: absolute;
+                top: 0;
+                right: 15px;
+                text-decoration: none;
+                color: white;
+            }
         </style>
         <script>
             $(document).ready(function() {
                 $(".tab-content h1:not(:first-child)").hide()
 
                 // $("ul.tab a").click
-                $("ul.tab").on("click", "li > a", function() {
+                $("ul.tab").on("click", "li > a:first-child", function() {
                     event.preventDefault()
                     // xu ly tab
                     $("ul.tab a").removeClass("active")
@@ -89,7 +101,7 @@
                     $(tab).show()
                 })
 
-                $(".tab a").on({
+                $(".tab a:first-child").on({
                     mouseenter: function() {
                       $(this).css("color", "green")  
                     },
@@ -110,6 +122,23 @@
                         `<h1 id="tab${count+1}" style="display:none">${content}</h1>`
                     )
                 })
+
+                $(".tab > li > a:last-child").click(function() {
+                    var content = $(this).siblings().attr("href")
+                    $(content).remove()
+
+                    var cls = $(this).siblings().attr("class");
+                    if (cls != undefined && cls.indexOf("active") >= 0) {
+                        $(this).parent().remove()
+                        $(".tab > li:first-child > a:first-child").addClass("active")
+                        $(".tab > li:first-child > a:first-child").click()
+                    } else {
+                        $(this).parent().remove()
+                    }
+                        
+                    
+                    
+                })
             })
         </script>
     </head>
@@ -124,10 +153,22 @@
             </div>
 
             <ul class="tab">
-                <li><a href="#tab1" class="active">Java</a></li>
-                <li><a href="#tab2">Python</a></li>
-                <li><a href="#tab3">C++</a></li>
-                <li><a href="#tab4">C#</a></li>
+                <li>
+                    <a href="#tab1" class="active">Java</a>
+                    <a href="javascript:;" class="close">&times;</a>
+                </li>
+                <li>
+                    <a href="#tab2">Python</a>
+                    <a href="javascript:;" class="close">&times;</a>
+                </li>
+                <li>
+                    <a href="#tab3">C++</a>
+                    <a href="javascript:;" class="close">&times;</a>
+                </li>
+                <li>
+                    <a href="#tab4">C#</a>
+                    <a href="javascript:;" class="close">&times;</a>
+                </li>
             </ul>
 
             <div class="tab-content active">
