@@ -1,0 +1,173 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: white
+}
+
+nav > ul.menu {
+    display: flex;
+    background-color: #CC3300;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul.menu > li {
+    width: 16.66%;
+    text-align: center;
+    border-right: 1px solid white;
+    position: relative;
+}
+
+nav > ul.menu > li > a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+nav > ul.menu > li > a:hover {
+    background-color: orange;
+}
+
+ul.menu > li > a > span {
+    display: block;
+}
+
+.col10 {
+    width: 10%;
+}
+
+.col70 {
+    width: 70%;
+}
+
+.col20 {
+    width: 20%;
+}
+
+.col30 {
+    width: 33.33%;
+}
+
+header {
+    background: linear-gradient(orange, #CC3300);
+    margin-top: 5px;
+}
+
+div.my-header {
+    display: flex;
+    align-items: center;
+}
+
+div.my-header h1 {
+    color: white;
+    font-size: 40px;
+    text-shadow: 3px 4px 3px darkblue;
+}
+
+input {
+   padding: 10px; 
+}
+
+input[type=text] {
+    width: 70%;
+}
+
+input[type=button] {
+    background-color: orange;
+    border: 1px solid orange;
+}
+
+.subcontent {
+    display: none;
+    width: 100%;
+}
+
+.subcontent::after {
+    content: " ";
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent #CC3300 transparent;
+    position: absolute;
+    bottom: 100%;
+    left: 45%
+}
+
+.sub:hover .subcontent {
+    display: block;
+    position: absolute;
+}
+
+section.courses {
+    width: 80%;
+    margin: 5px auto;
+}
+
+div.items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.item {
+    width: 25%;
+    padding: 5px;
+    position: relative;
+}
+
+div.item h1 {
+    background: linear-gradient(darkblue, lightblue);
+    color: white;
+    padding: 10px;
+}
+
+div.item > div {
+    text-align: center;
+    background: linear-gradient(rgb(216, 199, 168), orange);
+}
+
+div.item img {
+    width: 70%;
+}
+
+aside.ads {
+    position: fixed;
+}
+
+aside.ads img {
+    transition: transform 0.5s;
+}
+
+aside.ads img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background: linear-gradient(orange, #CC3300);
+}
+
+div.my-footer {
+    display: flex;
+    padding: 15px;
+}
+
+div.detail {
+    background: rgba(0, 0, 0, 0.6) !important;
+    text-align: left !important;
+    position:absolute;
+    top: 20px;
+    bottom: 0px;
+    padding-top: 20%;
+    padding-left: 10%;
+    opacity: 0;
+    transition: opacity 1s;
+    /* display: none; */
+}
+
+div.item:hover div.detail {
+    opacity: 1;
+    /* display: block; */
+}
