@@ -30,7 +30,7 @@ ul.menu > li > a {
     padding: 15px;
 }
 
-ul.menu > li > a:hover {
+nav > ul.menu > li > a:hover {
     background-color: orange;
 }
 
@@ -139,7 +139,7 @@ aside.ads {
     
 }
 
-aside.ads ul {
+aside.ads ul, div.detail ul {
     background: transparent !important;
 }
 
