@@ -13,11 +13,15 @@ nav > ul.menu {
     
 }
 
+nav {
+    background-color: rgb(223, 70, 10);
+}
+
 ul.menu {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background-color: #CC3300;
+    
 }
 
 nav > ul.menu > li {

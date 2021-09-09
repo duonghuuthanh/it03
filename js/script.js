@@ -32,4 +32,30 @@ $(document).ready(function() {
             $("div.item").css("outline", "none")
         }, 2000)
     })
+
+    $("nav ul.menu a").click(function() {
+        var id = $(this).attr("href")
+
+        $("html, body").animate({
+            "scrollTop": $(id).prop("offsetTop")
+        }, 1000)
+    })
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 100)
+            $("nav").css({
+                "position": 'fixed',
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "background-color": "rgb(223, 70, 10, 0.6)",
+                "z-index": "99999"
+            })
+        else
+            $("nav").css({
+                "position": "relative",
+                "background-color": "rgb(223, 70, 10)",
+                "top": 0
+            })
+    })
 })
