@@ -6,13 +6,14 @@
 
 nav > ul.menu {
     display: flex;
-    background-color: #CC3300;
+    
 }
 
 ul.menu {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    background-color: #CC3300;
 }
 
 nav > ul.menu > li {
@@ -22,14 +23,14 @@ nav > ul.menu > li {
     position: relative;
 }
 
-nav > ul.menu > li > a {
+ul.menu > li > a {
     display: block;
     text-decoration: none;
     color: white;
     padding: 15px;
 }
 
-nav > ul.menu > li > a:hover {
+ul.menu > li > a:hover {
     background-color: orange;
 }
 
@@ -135,6 +136,11 @@ div.item img {
 
 aside.ads {
     position: fixed;
+    
+}
+
+aside.ads ul {
+    background: transparent !important;
 }
 
 aside.ads img {
