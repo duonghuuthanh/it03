@@ -34,28 +34,27 @@ $(document).ready(function() {
     })
 
     $("nav ul.menu a").click(function() {
-        var id = $(this).attr("href")
+       var h = $(this).attr("href")
 
-        $("html, body").animate({
-            "scrollTop": $(id).prop("offsetTop")
-        }, 1000)
+       $("html, body").animate({
+            scrollTop: $(h).prop("offsetTop") + "px"
+       }, 1000)
     })
 
     $(window).scroll(function() {
-        if ($(this).scrollTop() >= 100)
+        if ($(this).scrollTop() >= 100) 
             $("nav").css({
-                "position": 'fixed',
+                "position": "fixed",
                 "left": 0,
                 "right": 0,
                 "top": 0,
-                "background-color": "rgb(223, 70, 10, 0.6)",
-                "z-index": "99999"
+                "z-index": 99999,
+                "opacity": 0.6
             })
         else
             $("nav").css({
                 "position": "relative",
-                "background-color": "rgb(223, 70, 10)",
-                "top": 0
+                "opacity": 1
             })
     })
 })

@@ -94,27 +94,6 @@ input[type=button] {
     border: 1px solid orange;
 }
 
-.subcontent {
-    display: none;
-    width: 100%;
-    z-index: 999;
-}
-
-.subcontent::after {
-    content: " ";
-    border-width: 20px;
-    border-style: solid;
-    border-color: transparent transparent #CC3300 transparent;
-    position: absolute;
-    bottom: 100%;
-    left: 45%
-}
-
-.sub:hover .subcontent {
-    display: block;
-    position: absolute;
-}
-
 section.courses {
     width: 80%;
     margin: 5px auto;
@@ -222,4 +201,26 @@ div.post {
 
 div.post img {
     width: 100%;
+}
+
+.submenu {
+    display: none;
+    background-color: #CC3300 !important;
+    width: 100%;
+    z-index: 999;
+}
+
+.submenu::after {
+    content: " ";
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent #CC3300 transparent;
+    position:absolute;
+    bottom: 100%;
+    left: 45%;
+}
+
+.sub:hover .submenu {
+    display: block;
+    position: absolute;
 }
