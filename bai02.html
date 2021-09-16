@@ -6,6 +6,10 @@
         <link href="images/lab02/calendar2.png" rel="shortcut icon" />
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/bai02.js"></script>
+        <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css" rel="stylesheet" />
     </head>
     <body>
         <header class="container">
@@ -13,7 +17,7 @@
                 <img src="images/lab02/calendar.png" alt="calendar" />
             </div>
             <div>
-                <h1>LICH LAM VIEC</h1>
+                <h1 class="animate__animated animate__rubberBand">LICH LAM VIEC</h1>
             </div>
             <div class="nav">
                 <nav>
@@ -26,14 +30,20 @@
             </div>
             <div>
                 <a href="#" class="avatar"><img src="images/lab02/user.png" alt="user" /></a>
+
+                <ul class="user-info">
+                    <li>Ho ten: Nguyen A</li>
+                    <li>Que quan: TP.HCM</li>
+                    <li>Nghe nghiep: Sinh vien</li>
+                </ul>
             </div>
         </header>
 
         <section class="ads">
-            <div>
+            <div class="wow animate__slideInLeft">
                 <h1>LIEN HE QUANG CAO</h1>
             </div>
-            <div>
+            <div class="wow animate__slideInRight">
                 <h1>LIEN HE QUANG CAO</h1>
             </div>
         </section>
@@ -200,6 +210,131 @@
                     <div class="col10">
                         <input type="button" value="Xoa" />
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h1 class="subject"><span><i class="fas fa-bus"></i> DU LICH</span></h1>
+
+            <div class="figures">
+                <figure class="c4-izmir c4-border-bottom-left c4-image-rotate-right c4-gradient-bottom-right">
+                    <img src="images/lab02/image04.jpg" alt="test" />
+                    <figcaption class="c4-layout-bottom-left">
+                        <h1>DA LAT</h1>
+                    </figcaption>
+                </figure>
+                <figure class="c4-izmir c4-border-right c4-image-pan-left c4-gradient-top">
+                    <img src="images/lab02/image05.jpg" alt="test" />
+                    <figcaption class="c4-layout-top-right">
+                        <h1>NHA TRANG</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image06.jpg" alt="test" />
+                    <figcaption>
+                        <h1>SAPA</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image07.jpg" alt="test" />
+                    <figcaption>
+                        <h1>PHU QUOC</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image08.jpg" alt="test" />
+                    <figcaption>
+                        <h1>NAM DU</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image10.jpg" alt="test" />
+                    <figcaption>
+                        <h1>BINH BA</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image12.jpg" alt="test" />
+                    <figcaption>
+                        <h1>HA GIANG</h1>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="container">
+            <h1 class="subject"><span><i class="fas fa-hat-chef"></i> NAU AN</span></h1>
+
+            <div class="figures">
+                <figure>
+                    <img src="images/lab02/image04.jpg" alt="test" />
+                    <figcaption>
+                        <h1>DA LAT</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image05.jpg" alt="test" />
+                    <figcaption>
+                        <h1>NHA TRANG</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image06.jpg" alt="test" />
+                    <figcaption>
+                        <h1>SAPA</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image07.jpg" alt="test" />
+                    <figcaption>
+                        <h1>PHU QUOC</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image08.jpg" alt="test" />
+                    <figcaption>
+                        <h1>NAM DU</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image10.jpg" alt="test" />
+                    <figcaption>
+                        <h1>BINH BA</h1>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lab02/image12.jpg" alt="test" />
+                    <figcaption>
+                        <h1>HA GIANG</h1>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="container">
+            <h1 class="subject"><span><i class="fas fa-history"></i> NHAT KY</span></h1>
+
+            <div class="info">
+                <div>
+                    <h5>CAC DIA DIEM DA THAM QUAN</h5>
+                    <ul>
+                        <li><a href="#">DA LAT</a></li>
+                        <li><a href="#">NHA TRANG</a></li>
+                        <li><a href="#">SAPA</a></li>
+                        <li><a href="#">HA GIANG</a></li>
+                        <li><a href="#">PHU QUOC</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>CAC MON AN NOI BAT</h5>
+                    <ul>
+                        <li><a href="#">MON AN 1</a></li>
+                        <li><a href="#">MON AN 2</a></li>
+                        <li><a href="#">SAPA</a></li>
+                        <li><a href="#">HA GIANG</a></li>
+                        <li><a href="#">PHU QUOC</a></li>
+                    </ul>
                 </div>
             </div>
         </section>

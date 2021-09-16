@@ -19,7 +19,7 @@
 }
 
 body {
-    background: linear-gradient(blue, lightblue, blue);
+    background: linear-gradient(blue, lightblue, rgb(167, 167, 230));
 }
 
 header {
@@ -160,4 +160,85 @@ footer > span {
     to {
         left: 100%;
     }
+}
+
+h1.subject {
+    border-bottom: 5px solid darkblue;
+    
+}
+
+h1.subject > span {
+    background-color: darkblue;
+    display: block;
+    width: 30%;
+    padding: 10px;
+    font-size: 2em;
+    position: relative;
+}
+
+h1.subject > span::after {
+    content: " ";
+    border-width: 37.5px;
+    border-style: solid;
+    border-color: transparent transparent darkblue darkblue;
+    position: absolute;
+    left: 100%;
+    bottom: 0px;
+}
+div.figures {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.figures > figure {
+    width: 25%;
+    margin: 0;
+}
+
+div.figures > figure img {
+    width: 100%;
+}
+
+ul.user-info {
+    background-color: darkred;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 18%;
+    display: none;
+}
+
+ul.user-info::after {
+    content: " ";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent darkred transparent;
+    position: absolute;
+    bottom: 100%;
+    right: 3%;
+}
+
+a.avatar:hover + ul.user-info {
+    display: block;
+}
+
+div.info {
+    display: flex;
+    width: 80%;
+    margin: 2.5em auto;
+}
+
+div.info > div {
+    width:50%;
+    background-color: darkblue;
+    padding: 1em;
+    border: 2px dashed gold;
+}
+
+div.info > div:first-child {
+    transform: skewY(-5deg) 
+}
+
+div.info > div:last-child {
+    transform: skewY(5deg) 
 }
