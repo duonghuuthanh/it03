@@ -4,7 +4,7 @@ $(document).ready(function() {
     $("div.items > div.item:nth-child(odd)").addClass("animate__animated animate__slideInRight")
     $("div.figures > figure").addClass("wow animate__flipInY")
     $("div.figures > figure").addClass("c4-izmir c4-border-bottom-left c4-image-rotate-right c4-gradient-bottom-right")
-    $("div.fugures > figure > figcaption").addClass("c4-layout-bottom-left")
+    $("div.figures > figure > figcaption").addClass("c4-layout-bottom-left")
     wow = new WOW({
         boxClass:     'wow',      // default
         animateClass: 'animate__animated', // default
