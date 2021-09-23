@@ -21,32 +21,37 @@
                 var pro = $("#program")
 
                 $(window).scroll(function() {
-                    if ($(this).scrollTop() >= 1000) {
-                        yearTimer = start(year, 3, 30, "year")
-                        studTimer = start(stud, 500000, 10000000, "stud")
-                        proTimer = start(pro, 10, 100, "pro")
+                    if ($(this).scrollTop() >= 1100) {
+                        if (yearTimer === null)
+                            yearTimer = start(year, 3, 30, "year")
+                        if (studTimer === null)
+                            studTimer = start(stud, 500000, 10000000, "stud")
+                        if (proTimer === null)
+                            proTimer = start(pro, 10, 100, "pro")
                     }
                 })
                
             })
 
             function start(el, steps, max, type) {
-                return setInterval(function() {
-                    var value = parseInt(el.text())
-                    if (value < max) {
-                        value += steps
-                        el.text(value)
-                    } else {
-                        if (type === "year")
-                            clearInterval(yearTimer)
-                        else if (type === "stud")
-                            clearInterval(studTimer)
-                        else if (type === "pro")
-                            clearInterval(proTimer);
+                var value = parseInt(el.text())
+                if (value < max)
+                    return setInterval(function() {
+                        
+                        if (value < max) {
+                            value += steps
+                            el.text(value)
+                        } else {
+                            if (type === "year")
+                                clearInterval(yearTimer)
+                            else if (type === "stud")
+                                clearInterval(studTimer)
+                            else if (type === "pro")
+                                clearInterval(proTimer);
 
-                        console.log(Math.random())
-                    }
-                }, 100);
+                            console.log(Math.random())
+                        }
+                    }, 100);    
             }
         </script>
 
