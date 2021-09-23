@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+        <link href="css/bai03.css" rel="stylesheet" />
+        <link href="images/lab03/computer.png" rel="shortcut icon" />
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script>
+            var yearTimer = null;
+            var proTimer = null;
+            var studTimer = null
+            $(document).ready(function() {
+                var year = $("#year")
+                var stud = $("#student")
+                var pro = $("#program")
+
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() >= 1000) {
+                        yearTimer = start(year, 3, 30, "year")
+                        studTimer = start(stud, 500000, 10000000, "stud")
+                        proTimer = start(pro, 10, 100, "pro")
+                    }
+                })
+               
+            })
+
+            function start(el, steps, max, type) {
+                return setInterval(function() {
+                    var value = parseInt(el.text())
+                    if (value < max) {
+                        value += steps
+                        el.text(value)
+                    } else {
+                        if (type === "year")
+                            clearInterval(yearTimer)
+                        else if (type === "stud")
+                            clearInterval(studTimer)
+                        else if (type === "pro")
+                            clearInterval(proTimer);
+
+                        console.log(Math.random())
+                    }
+                }, 100);
+            }
+        </script>
+
+    </head>
+    <body>
+        <nav>
+            <div class="container d-flex">
+                <div>
+                    <ul class="menu d-flex">
+                        <li><a href="#"><i class="fas fa-home"></i></a></li>
+                        <li><a href="#">Lich khai giang</a></li>
+                        <li><a href="#">Chuong trinh dao tao</a></li>
+                        <li><a href="#">Tin tuc</a></li>
+                        <li><a href="#">Lien he</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group d-flex">
+                    <a href="#" class="btn"><i class="fas fa-check"></i> Dang ky</a>
+                    <a href="#" class="btn"><i class="fas fa-user"></i> Dang nhap</a>
+                </div>
+            </div> 
+        </nav>
+        <header>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                  <li data-target="#demo" data-slide-to="3"></li>
+                  <li data-target="#demo" data-slide-to="4"></li>
+                </ul>
+              
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/lab03/banner/1.png" alt="test">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/lab03/banner/2.png" alt="test">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/lab03/banner/3.png" alt="test">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/lab03/banner/4.png" alt="test">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/lab03/banner/5.png" alt="test">
+                  </div>
+                </div>
+              
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              
+              </div>
+        </header>
+
+        <section>
+            <h1 class="subject">DANH SACH KHOA HOC</h1>
+
+            <div class="course">
+                <div class="items d-flex container">
+                    <figure>
+                        <img src="images/lab03/course/Lap_trinh_va_CSDL.png" alt="test" />
+                        <figcaption>
+                            <h4>LAP TRINH VA CSDL</h4>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/lab03/course/Lap_trinh_di_dong.png" alt="test" />
+                        <figcaption>
+                            <h4>LAP TRINH DI DONG</h4>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/lab03/course/Mang_may_tinh.png" alt="test" />
+                        <figcaption>
+                            <h4>MANG MAY TINH</h4>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/lab03/course/Chung_chi_MOS.png" alt="test" />
+                        <figcaption>
+                            <h4>CHUNG CHI MOS</h4>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/lab03/course/thiet_ke_website.png" alt="test" />
+                        <figcaption>
+                            <h4>THIET KE WEB</h4>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/lab03/course/Internet_Marketing.png" alt="test" />
+                        <figcaption>
+                            <h4>INTERNET MARKETING</h4>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/lab03/course/Tin_hoc_van_phong.png" alt="test" />
+                        <figcaption>
+                            <h4>TIN HOC VAN PHONG</h4>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/lab03/course/Kiem_thu_phan_mem.png" alt="test" />
+                        <figcaption>
+                            <h4>KIEM THU PHAN MEM</h4>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h1 class="subject">TIN TUC - SU KIEN</h1>
+
+            <div class="container d-flex news">
+                <div class="news-item">
+                    <img src="images/lab03/news/trung-tam-tin-hoc-tong-khai-giang-khoa-243-580x435.png" />
+                </div>
+                <div class="d-flex news">
+                    <div class="news-item">
+                        <img src="images/lab03/news/280x210.png" />
+                    </div>
+                    <div class="news-item"><img src="images/lab03/news/khoa-hoc-quan-tri-he-thong-mang-a1.jpg" /></div>
+                    <div class="news-item"><img src="images/lab03/news/nam-2018-hoc-lap-trinh-co-gi-moi-280.png" /></div>
+                    <div class="news-item"><img src="images/lab03/news/package-280.png" /></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h1 class="subject">CAM ON DA TIN TUONG CHUNG TOI!</h1>
+            <div class="container d-flex my-stats">
+                <div class="stats">
+                    <i class="fas fa-calendar"></i>
+                    <h3>SO NAM THANH LAP</h3>
+                    <h3><span id="year">0</span>+</h3>
+                </div>
+                <div class="stats">
+                    <i class="fas fa-user"></i>
+                    <h3>SO HOC VIEN</h3>
+                    <h3><span id="student">0</span>+</h3>
+                </div>
+                <div class="stats">
+                    <i class="fas fa-book"></i>
+                    <h3>CHUONG TRINH DAO TAO</h3>
+                    <h3><span id="program">0</span>+</h3>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span>Duong Huu Thanh &copy; 2021</span>
+        </footer>
+    </body>
+</html>

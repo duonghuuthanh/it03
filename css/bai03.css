@@ -1,0 +1,164 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    background-color: cornflowerblue;
+    padding: 10px; 
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul.menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+}
+
+ul.menu > li > a:hover {
+    background-color: darkblue;
+}
+
+ul.menu > li:first-child > a {
+    padding: 15px 5px;
+}
+
+.btn {
+    color: white;
+    display: block;
+    padding: 15px 10px;
+}
+
+.btn-group > .btn:first-child {
+    background-color: lightcoral;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid red;
+}
+
+.btn-group > .btn:last-child {
+    background-color: lightgreen;
+    border-radius: 0 5px 5px 0;
+    border: 2px solid green;
+}
+
+.btn-group > .btn:hover {
+    opacity: 0.6;
+}
+
+h1.subject {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+h1.subject::after {
+    content: "--o0o--";
+    display: block;
+    font-size: 1.5rem;
+}
+
+div.course {
+    background-image: url(../images/lab03/section_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 30px;
+}
+
+div.items {
+    background-color: rgba(7, 7, 136, 0.6);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+div.items > figure {
+    width: 25%;
+}
+
+figure > img {
+    transition: transform 0.5s;
+}
+
+figure > img:hover {
+    transform: rotate(20deg);
+}
+
+div.news > div {
+    width: 50%;
+}
+
+div.news img {
+    width: 100%;
+}
+
+.my-stats {
+    text-align: center;
+}
+
+div.stats > i {
+    font-size: 4rem;
+}
+
+div.stats > h3 {
+    font-weight: bold;
+}
+
+.fa-calendar {
+    color: green;
+}
+
+.fa-user {
+    color:darkkhaki;
+}
+
+.fa-book {
+    color: brown;
+}
+
+footer {
+    background-color: darkblue;
+    color: white;
+    padding: 30px 10px;
+}
+
+div.news-item {
+    position: relative;
+}
+div.news-item::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 255, 0.4);
+    transition: height 1s;
+}
+
+div.news-item:hover::after {
+    height: 100%;
+}
